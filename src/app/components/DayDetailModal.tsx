@@ -136,12 +136,12 @@ export const DayDetailModal = ({ date, open, onClose }: DayDetailModalProps) => 
                         <span className="text-lg text-white font-mono">{trade.symbol}</span>
                         <Badge
                           className={
-                            trade.tradeType === "buy"
+                            trade.trade_type === "buy"
                               ? "ml-2 bg-[#00D4FF]/20 text-[#00D4FF] border-[#00D4FF]/30"
                               : "ml-2 bg-[#7A5CFF]/20 text-[#7A5CFF] border-[#7A5CFF]/30"
                           }
                         >
-                          {trade.tradeType.toUpperCase()}
+                          {trade.trade_type.toUpperCase()}
                         </Badge>
                       </div>
                       <div
@@ -156,11 +156,11 @@ export const DayDetailModal = ({ date, open, onClose }: DayDetailModalProps) => 
                     <div className="grid grid-cols-3 gap-3 text-sm mb-2">
                       <div>
                         <span className="text-white/60">Entry: </span>
-                        <span className="text-white">${trade.entryPrice}</span>
+                        <span className="text-white">{trade.entry_price}</span>
                       </div>
                       <div>
                         <span className="text-white/60">Exit: </span>
-                        <span className="text-white">${trade.exitPrice}</span>
+                        <span className="text-white">{trade.exit_price}</span>
                       </div>
                       <div>
                         <span className="text-white/60">Qty: </span>

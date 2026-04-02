@@ -130,7 +130,7 @@ export const AddTradeModal = ({ open, onClose, editTrade }: Props) => {
               <div key={key} className="space-y-2">
                 <Label className="text-white/90">{label}</Label>
                 <Input type="number" step="any" placeholder={ph}
-                  value={(form as Record<string, string>)[key]}
+                  value={(form as any)[key]}
                   onChange={(e) => setForm({ ...form, [key]: e.target.value })}
                   required className="bg-white/5 border-white/10 text-white placeholder:text-white/30" />
               </div>
